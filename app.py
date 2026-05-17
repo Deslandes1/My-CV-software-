@@ -12,9 +12,9 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-    /* Main background */
+    /* Main background – soft warm off-white, not blank white */
     .stApp {
-        background: linear-gradient(145deg, #f8f9fc 0%, #eef2f7 100%);
+        background: linear-gradient(145deg, #fef9e6 0%, #fff4e4 100%);
     }
     /* Sidebar styling */
     [data-testid="stSidebar"] {
@@ -30,13 +30,14 @@ st.markdown(
     }
     /* Card-like containers */
     .cv-card {
-        background: white;
+        background: rgba(255, 255, 255, 0.92);
         border-radius: 24px;
         padding: 1.8rem;
         margin-bottom: 1.8rem;
         box-shadow: 0 12px 24px rgba(0,0,0,0.05);
         border-left: 8px solid #ffb347;
         transition: 0.2s;
+        backdrop-filter: blur(0px);
     }
     .cv-card:hover {
         transform: translateY(-3px);
@@ -90,7 +91,7 @@ st.markdown(
 
 # ---------- SIDEBAR (PERSONAL & PROMO) ----------
 with st.sidebar:
-    st.image("https://raw.githubusercontent.com/Deslandes1/Gesner-AIx/main/recording.wav", width=100)  # placeholder, but we can't show image without URL; instead use emoji
+    # Removed broken image – just use emoji
     st.markdown("# 🧠 Gesner Deslandes")
     st.markdown("**Software Builder · Python Developer · AI Enthusiast**")
     st.markdown("---")
